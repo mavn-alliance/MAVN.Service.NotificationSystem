@@ -1,0 +1,50 @@
+NotificationSystemService:
+    Db:
+        LogsConnString:
+            settings-key: NotificationSystemService-LogsConnString
+            types:
+              - AzureTableStorage
+        TemplateConnString:
+            settings-key: NotificationSystemService-TemplateConnString
+            types:
+              - AzureTableStorage
+        MsSqlDataConnString:
+            settings-key: NotificationSystemService-MsSqlDataConnString
+    CommonSender:
+        IdentityNamespace:
+            settings-key: NotificationSystemService-IdentityNamespace
+        LocalizationKey:
+            settings-key: NotificationSystemService-LocalizationKey
+    EmailSender:
+        EmailKey:
+            settings-key: NotificationSystemService-EmailKey
+    SmsSender:
+        PhoneNumberKey:
+            settings-key: NotificationSystemService-PhoneNumberKey
+SlackNotifications:
+    AzureQueue:
+        ConnectionString:
+            settings-key: SlackNotificationsConnString
+            types:
+                - AzureTableStorage
+        QueueName:
+            settings-key: SlackQueueName
+MonitoringServiceClient:
+    MonitoringServiceUrl:
+        settings-key: MonitoringServiceUrl
+NotificationSystemAdapterServiceClient:
+    ServiceUrl:
+        settings-key: NotificationSystemAdapterServiceUrl
+    ApiKey:
+        settings-key: NotificationSystemAdapterService-ApiKey
+Rabbit:
+    ConnectionString:
+      settings-key: NotificationSystemRabbitMQ
+      types:
+        - RabbitMq
+    EmailMessageSubscriberQueueName:
+      settings-key: NotificationSystemAdapterService-EmailMessageSubscriberQueueName
+    PushNotificationSubscriberQueueName:
+      settings-key: NotificationSystemAdapterService-PushNotificationSubscriberQueueName
+    SmsSubscriberQueueName:
+      settings-key: NotificationSystemAdapterService-SmsSubscriberQueueName
