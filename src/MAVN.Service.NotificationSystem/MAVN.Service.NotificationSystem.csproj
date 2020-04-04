@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <LangVersion>latest</LangVersion>
+    <DocumentationFile>MAVN.Service.NotificationSystem.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Dockerfile">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Lykke.Common.ApiLibrary" Version="2.4.2" />
+    <PackageReference Include="Lykke.Sdk" Version="5.17.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="3.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\MAVN.Service.NotificationSystem.Client\MAVN.Service.NotificationSystem.Client.csproj" />
+    <ProjectReference Include="..\..\contract\MAVN.Service.NotificationSystem.SubscriberContract\MAVN.Service.NotificationSystem.SubscriberContract.csproj" />
+    <ProjectReference Include="..\MAVN.Service.NotificationSystem.AzureRepositories\MAVN.Service.NotificationSystem.AzureRepositories.csproj" />
+    <ProjectReference Include="..\MAVN.Service.NotificationSystem.MsSqlRepositories\MAVN.Service.NotificationSystem.MsSqlRepositories.csproj" />
+    <ProjectReference Include="..\MAVN.Service.NotificationSystem.Domain\MAVN.Service.NotificationSystem.Domain.csproj" />
+    <ProjectReference Include="..\MAVN.Service.NotificationSystem.DomainServices\MAVN.Service.NotificationSystem.DomainServices.csproj" />
+  </ItemGroup>
+</Project>
