@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Falcon.Service.NotificationSystemAdapter.Client" Version="1.0.3" />
+    <PackageReference Include="Lykke.RabbitMqBroker" Version="7.13.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MAVN.Service.NotificationSystem.Domain\MAVN.Service.NotificationSystem.Domain.csproj" />
+  </ItemGroup>
+</Project>
