@@ -1,22 +1,23 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using AutoMapper;
 using Common.Log;
 using Lykke.Common.Log;
+using Lykke.Service.NotificationSystemAdapter.Client;
 using MAVN.Service.NotificationSystem.Contract.Enums;
 using MAVN.Service.NotificationSystem.Contract.MessageContracts;
 using MAVN.Service.NotificationSystem.Domain.Enums;
 using MAVN.Service.NotificationSystem.Domain.Models;
 using MAVN.Service.NotificationSystem.Domain.Publishers;
 using MAVN.Service.NotificationSystem.Domain.Services;
-using MAVN.Service.NotificationSystemAdapter.Client;
 using MoreLinq;
 using Newtonsoft.Json;
-using CallType = Lykke.Service.NotificationSystem.Domain.Models.CallType;
+using CallType = MAVN.Service.NotificationSystem.Domain.Models.CallType;
 
 namespace MAVN.Service.NotificationSystem.DomainServices
 {

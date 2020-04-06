@@ -1,3 +1,3 @@
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("Lykke.Service.NotificationSystem.Tests")]
+[assembly: InternalsVisibleTo("MAVN.Service.NotificationSystem.Tests")]

@@ -1,4 +1,4 @@
-using Autofac;
+﻿using Autofac;
 using MAVN.Service.NotificationSystem.AzureRepositories;
 using MAVN.Service.NotificationSystem.Domain.Publishers;
 using MAVN.Service.NotificationSystem.Domain.Repositories;
@@ -7,7 +7,7 @@ using MAVN.Service.NotificationSystem.DomainServices;
 using MAVN.Service.NotificationSystem.Rabbit.Publishers;
 using MAVN.Service.NotificationSystem.Rabbit.Subscribers;
 using MAVN.Service.NotificationSystem.Settings;
-using MAVN.Service.NotificationSystemAdapter.Client;
+using Lykke.Service.NotificationSystemAdapter.Client;
 using Lykke.SettingsReader;
 
 namespace MAVN.Service.NotificationSystem.Modules

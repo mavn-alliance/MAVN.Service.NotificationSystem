@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MAVN.Service.NotificationSystem</name>
+    </assembly>
+    <members>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationMessageController.SendEmailAsync(MAVN.Service.NotificationSystem.Client.Models.Message.SendEmailRequest)">
+            <inheritdoc/>
+            <response code="200"></response>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationMessageController.SendSmsAsync(MAVN.Service.NotificationSystem.Client.Models.Message.SendSmsRequest)">
+            <inheritdoc/>
+            <response code="200"></response>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationMessageController.SendPushNotificationAsync(MAVN.Service.NotificationSystem.Client.Models.Message.SendPushNotificationRequest)">
+            <inheritdoc/>
+            <response code="200"></response>
+        </member>
+        <member name="T:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController">
+            <summary>
+            NotificationSystem client API interface for work with templates. 
+            </summary>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController.CreateTemplateAsync(MAVN.Service.NotificationSystem.Client.Models.NotificationTemplate.NewTemplateRequest)">
+            <summary>
+            Create ot update template.
+            </summary>
+            <param name="template">info about template</param>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController.UpdateTemplateAsync(MAVN.Service.NotificationSystem.Client.Models.NotificationTemplate.NewTemplateRequest)">
+            <summary>
+            Update template
+            </summary>
+            <param name="template">info about template</param>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController.GetTemplateteRegistryAsync">
+            <summary>
+            Get info about all templates.
+            Info not include template body.
+            </summary>
+            <returns>List of template descriptions</returns>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController.FindTemplateAsync(System.String,System.String)">
+            <summary>
+            Get full info template by name and language code.
+            </summary>
+            <param name="templateName">Name of template</param>
+            <param name="templateLanguage">Language of template</param>
+            <returns>Template with content(body)</returns>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController.DeleteTemplateAsync(System.String)">
+            <summary>
+            Delete template by name, with all language
+            </summary>
+            <param name="templateName">Name of template</param>
+        </member>
+        <member name="M:MAVN.Service.NotificationSystem.Controllers.NotificationTemplateController.DeleteTemplateAsync(System.String,System.String)">
+            <summary>
+            Delete template by name and language
+            </summary>
+            <param name="templateName">>Name of template</param>
+            <param name="templateLanguage">Template language</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
