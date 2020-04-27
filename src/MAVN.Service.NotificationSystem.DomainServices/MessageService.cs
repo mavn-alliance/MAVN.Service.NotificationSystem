@@ -25,6 +25,7 @@ namespace MAVN.Service.NotificationSystem.DomainServices
     {
         private const string DefaultLocalization = "en";
         private const string EmailParamKey = "target_email";
+        private const string LocalizationParamKey = "Localization";
         private const string PhoneNumberParamKey = "target_phonenumber";
         private readonly string _messageParametersRegexPattern = "^@@@(?<MessageParameters>.*?)@@@(?<MessageText>.*?)$";
         private readonly ILog _log;
@@ -115,7 +116,17 @@ namespace MAVN.Service.NotificationSystem.DomainServices
                 return messageResponse;
             }
 
-            var localization = GetLocalization(identityParameters);
+            Localization localization;
+            // get localization from emailMessage.TemplateParameters
+            if (emailMessage.TemplateParameters.ContainsKey(LocalizationParamKey) &&
+                !string.IsNullOrEmpty(emailMessage.TemplateParameters[LocalizationParamKey]))
+            {
+                localization = Localization.From(emailMessage.TemplateParameters[LocalizationParamKey]);
+            }
+            else
+            {
+                localization = GetLocalization(identityParameters);
+            }
 
             //Find subject template
             var subjectTemplate =
