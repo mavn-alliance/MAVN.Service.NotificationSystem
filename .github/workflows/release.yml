@@ -8,11 +8,13 @@ on:
 env:
   RELEASE_CLIENT: true
   RELEASE_CONTRACT: true
+  RELEASE_SUBSCRIBER_CONTRACT: true
   RELEASE_JOB: false
   RELEASE_SERVICE: true
   
   CLIENT_PROJECT: ./client/MAVN.Service.NotificationSystem.Client/MAVN.Service.NotificationSystem.Client.csproj
   CONTRACT_PROJECT: ./contract/MAVN.Service.NotificationSystem.Contract/MAVN.Service.NotificationSystem.Contract.csproj
+  SUBSCRIBER_CONTRACT_PROJECT: ./contract/MAVN.Service.NotificationSystem.SubscriberContract/MAVN.Service.NotificationSystem.SubscriberContract.csproj
   JOB_DOCKER_IMAGE:
   JOB_PROJECT:
   SERVICE_DOCKER_IMAGE: notification-system-service
@@ -76,6 +78,9 @@ jobs:
       - name: Pack contract NuGet package
         if: env.RELEASE_CONTRACT == 'true'
         run: dotnet pack $CONTRACT_PROJECT --configuration Release --output ../../packages --no-build --include-symbols --include-source /p:SymbolPackageFormat=snupkg /p:Version=$VERSION
+      - name: Pack subscriber contract NuGet package
+        if: env.RELEASE_SUBSCRIBER_CONTRACT == 'true'
+        run: dotnet pack $SUBSCRIBER_CONTRACT_PROJECT --configuration Release --output ../../packages --no-build --include-symbols --include-source /p:SymbolPackageFormat=snupkg /p:Version=$VERSION
       
       # Push Docker Images
       - name: Push job docker image
