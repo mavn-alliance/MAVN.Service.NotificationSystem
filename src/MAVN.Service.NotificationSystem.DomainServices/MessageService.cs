@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Common.Log;
 using Lykke.Common.Log;
-using Lykke.Service.NotificationSystemAdapter.Client;
+using MAVN.Service.NotificationSystemAdapter.Client;
 using MAVN.Service.NotificationSystem.Contract.Enums;
 using MAVN.Service.NotificationSystem.Contract.MessageContracts;
 using MAVN.Service.NotificationSystem.Domain.Enums;
