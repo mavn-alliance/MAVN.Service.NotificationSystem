@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.NotificationSystem.Domain.Models;
 using MAVN.Service.NotificationSystem.Domain.Repositories;
 using MAVN.Service.NotificationSystem.MsSqlRepositories.Entities;
