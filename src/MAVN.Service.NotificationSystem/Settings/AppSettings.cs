@@ -1,6 +1,6 @@
-﻿using JetBrains.Annotations;
+using JetBrains.Annotations;
 using Lykke.Sdk.Settings;
-using Lykke.Service.NotificationSystemAdapter.Client;
+using MAVN.Service.NotificationSystemAdapter.Client;
 
 namespace MAVN.Service.NotificationSystem.Settings
 {

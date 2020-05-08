@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoFixture;
@@ -10,7 +10,7 @@ using MAVN.Service.NotificationSystem.Domain.Models;
 using MAVN.Service.NotificationSystem.Domain.Publishers;
 using MAVN.Service.NotificationSystem.Domain.Services;
 using MAVN.Service.NotificationSystem.DomainServices;
-using Lykke.Service.NotificationSystemAdapter.Client;
+using MAVN.Service.NotificationSystemAdapter.Client;
 using Moq;
 using Xunit;
 using CallType = MAVN.Service.NotificationSystem.Domain.Models.CallType;
