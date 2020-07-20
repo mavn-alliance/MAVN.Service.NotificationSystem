@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -15,7 +15,6 @@ namespace MAVN.Service.NotificationSystem.Controllers
     /// <summary>
     /// NotificationSystem client API interface for work with templates. 
     /// </summary>
-    [ApiVersion("1.0")]
     [Route("/api/templates")]
     [ApiController]
     [Produces("application/json")]

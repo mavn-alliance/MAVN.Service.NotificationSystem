@@ -1,12 +1,12 @@
-using System.Data.Common;
+﻿using System.Data.Common;
 using JetBrains.Annotations;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.NotificationSystem.MsSqlRepositories.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.NotificationSystem.MsSqlRepositories
 {
-    public class NotificationSystemContext : MsSqlContext
+    public class NotificationSystemContext : PostgreSQLContext
     {
         private const string Schema = "notification_system";
 
@@ -34,7 +34,7 @@ namespace MAVN.Service.NotificationSystem.MsSqlRepositories
         {
         }
 
-        protected override void OnLykkeModelCreating(ModelBuilder modelBuilder)
+        protected override void OnMAVNModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TemplateEntity>().HasIndex(x => x.Name).IsUnique();
         }

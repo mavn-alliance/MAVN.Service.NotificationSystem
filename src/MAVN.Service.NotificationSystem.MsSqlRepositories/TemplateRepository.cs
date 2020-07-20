@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.NotificationSystem.Domain.Models;
 using MAVN.Service.NotificationSystem.Domain.Repositories;
 using MAVN.Service.NotificationSystem.MsSqlRepositories.Entities;
@@ -11,9 +11,9 @@ namespace MAVN.Service.NotificationSystem.MsSqlRepositories
 {
     public class TemplateRepository : ITemplateRepository
     {
-        private readonly MsSqlContextFactory<NotificationSystemContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<NotificationSystemContext> _msSqlContextFactory;
 
-        public TemplateRepository(MsSqlContextFactory<NotificationSystemContext> msSqlContextFactory)
+        public TemplateRepository(PostgreSQLContextFactory<NotificationSystemContext> msSqlContextFactory)
         {
             _msSqlContextFactory = msSqlContextFactory;
         }
